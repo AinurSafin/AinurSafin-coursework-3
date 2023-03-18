@@ -28,6 +28,6 @@ def test_get_last_data(test_data):
 
 def test_get_formatted_data(test_data):
     data = get_formatted_data(test_data[:1])
-    assert data == ['09.03.2018 Перевод организации\nСчет 3 62** **** 3262 -> Счет **1\n25780.71 руб.\n']
+    assert data == ['09.03.2018 Перевод организации\nСчет 2640 62** **** 3262 -> Счет **1315\n25780.71 руб.\n']
     data = get_formatted_data(test_data[1:2])
-    assert data == ['15.07.2019 Открытие вклада\n[СКРЫТО]  -> Счет **2\n92688.46 USD\n']
+    assert data == ['15.07.2019 Открытие вклада\n[СКРЫТО]  -> Счет **2265\n92688.46 USD\n']

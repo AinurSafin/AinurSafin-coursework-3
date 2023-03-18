@@ -32,12 +32,12 @@ def get_formatted_data(data):
         if "from" in row:
             sender = row["from"].split()
             sender_bill = sender.pop(-1)
-            sender_bill = f"{sender_bill[-4]} {sender_bill[4:6]}** **** {sender_bill[-4:]}"
+            sender_bill = f"{sender_bill[:4]} {sender_bill[4:6]}** **** {sender_bill[-4:]}"
             sender_info = " ".join(sender)
         else:
             sender_bill, sender_info = "", "[СКРЫТО]"
 
-        recipient = f"**{row['to'][-4]}"
+        recipient = f"**{row['to'][-4:]}"
         amount = f'{row["operationAmount"]["amount"]} {row["operationAmount"]["currency"]["name"]}'
         formatted_data.append(f"""\
 {date} {description}
